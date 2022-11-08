@@ -18,10 +18,10 @@ samples, guidance on mobile development, and a full API reference.
 # Jawaban dari pertanyaan yang telah diberikan (Tugas 7)
 
 ### 1. Jelaskan apa yang dimaksud dengan *stateless widget* dan *stateful widget* dan jelaskan perbedaan dari keduanya
-- Stateless widget : Widget yang memiliki keadaan (state) yang tidak "berubah" ketika diberikan interaksi oleh user
-- Stateful widget : Berbalik dengan stateless widget, stateful widget adalah widget yang akan bereaksi ketika diberikan interaksi oleh user
-- Berdasarkan definisi keduanya, perbedaan yang mendasar adalah dampak dari kedua widget ketika diberikan interaksi oleh user
-- Contoh pada program, terdapat pada file main.dart. MyApp yang mengandung header & judul web = Stateless, sedangkan MyHomePage yang mengandung isi program = Stateful
+- Stateless widget : Widget yang memiliki keadaan (state) yang tidak "berubah" ketika diberikan interaksi oleh user. Nilai dari stateless widget sendiri selalu mengikuti parent yang dimilikinya.
+- Stateful widget : Berkebalikan dengan stateless widget, stateful widget adalah widget yang dapat "berubah" ketika diberikan interaksi oleh user. Stateful dapat menyimpan state dirinya untuk kebutuhan program, seperti perubahan nilai dan tampilan widget.
+- Berdasarkan definisi keduanya, perbedaan yang mendasar adalah perilaku dari kedua widget ketika diberikan interaksi oleh user.
+- Contoh pada program, terdapat pada file main.dart. MyApp yang mengandung header & judul web = Stateless, sedangkan MyHomePage yang mengandung isi program = Stateful.
 
 ### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 Berdasarkan [situs dokumentasi flutter](https://docs.flutter.dev/development/ui/widgets/) dan pemahaman widget yang saya miliki, widget yang saya gunakan adalah:
@@ -34,7 +34,7 @@ Berdasarkan [situs dokumentasi flutter](https://docs.flutter.dev/development/ui/
 - Floating Action Button : Widget representasi tombol. Umumnya, digunakan sebagai pemicu suatu aksi. 
 
 ### 3. Apa fungsi dari **setState()**? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
-- setState() adalah melakukan build ulang pada state terkait. Pada konteks program ini, nilai yang akan berubah adalah angka counter dan text genap/ganjil-nya counter tersebut.
+- setState() adalah fungsi untuk melakukan build ulang pada state terkait. Pada konteks program kali ini, nilai yang akan berubah adalah angka counter dan text genap/ganjil-nya counter tersebut.
 - Variabel yang terdampak ketika setState() dilakukan adalah _counter. Variabel _counter yang berubah akan memberi dampak pula pada Text di body karena terdapat conditional yang menggunakan _counter sebagai kondisinya.
 
 ### 4. Jelaskan perbedaan antara *const* dengan *final*.
@@ -48,3 +48,5 @@ Berdasarkan [situs dokumentasi flutter](https://docs.flutter.dev/development/ui/
 - Menambahkan fungsi decrementCounter sebagai kebalikan dari incrementCounter, serta menambahkan logika bahwa variabel _counter tidak dapat menjadi negatif dengan penerapan conditional
 - Mengubah text pada body sehingga dapat berubah-ubah menyesuaikan ganjil/genap dari variabel _counter menggunakan conditional
 - Membuat tombol yang berada di pojok kiri dan kanan bawah menggunakan campuran Padding dan Row terhadap Floating Action Button
+- Untuk mengimplementasikan bonus, arah Row diubah dari kanan ke kiri sehingga kemunculan pertama adalah tombol (+), lalu (-)
+- Berikan conditional untuk munculnya tombol (-)
