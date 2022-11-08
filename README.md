@@ -25,12 +25,13 @@ samples, guidance on mobile development, and a full API reference.
 
 ### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 Berdasarkan [situs dokumentasi flutter](https://docs.flutter.dev/development/ui/widgets/) dan pemahaman widget yang saya miliki, widget yang saya gunakan adalah:
-- Text : Tulisan dengan satu style
-- Icon : Material yang menampilkan logo
-- Column : Layout untuk peletakan child widget sesuai arah vertikal (kolom)
-- Row : Layout untuk peletakan child widget sesuai arah horizontal (baris)
-- Center : Layout untuk membuat peletakan child menjadi di tengah
-- Padding : Widget yang memberikan area kosong dengan nilai tertentu (paddding) pada child di dalamnya
+- Text : Tulisan dengan satu style. Digunakan untuk merepresentasikan tulisan
+- Icon : Material yang menampilkan logo. Digunakan untuk visualisasi logo
+- Column : Layout untuk peletakan child widget sesuai arah vertikal (kolom). Digunakan untuk mengontrol peletakan child yang dimilikinya.
+- Row : Layout untuk peletakan child widget sesuai arah horizontal (baris). Digunakan untuk mengontrol peletakan child yang dimilikinya.
+- Center : Layout untuk membuat peletakan child menjadi di tengah. Digunakan untuk mengontrol peletakan child yang dimilikinya.
+- Padding : Widget yang memberikan lapisan kosong dengan nilai tertentu (paddding) di sekitaran child dari padding. Digunakan untuk mengontrol peletakan child yang dimilikinya.
+- Floating Action Button : Widget representasi tombol. Umumnya, digunakan sebagai pemicu suatu aksi. 
 
 ### 3. Apa fungsi dari **setState()**? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
 - setState() adalah melakukan build ulang pada state terkait. Pada konteks program ini, nilai yang akan berubah adalah angka counter dan text genap/ganjil-nya counter tersebut.
