@@ -50,3 +50,35 @@ Berdasarkan [situs dokumentasi flutter](https://docs.flutter.dev/development/ui/
 - Membuat tombol yang berada di pojok kiri dan kanan bawah menggunakan campuran Padding dan Row terhadap Floating Action Button
 - Untuk mengimplementasikan bonus, arah Row diubah dari kanan ke kiri sehingga kemunculan pertama adalah tombol (+), lalu (-)
 - Berikan conditional untuk munculnya tombol (-)
+
+# Jawaban dari pertanyaan yang telah diberikan (Tugas 8)
+
+### 1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+- Navigator.push : Meletakkan halaman ke tumpukkan kumpulan layar
+- Navigator.pushReplacement : Berpindah ke halaman baru yang telah diinisiasikan
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya
+- Drawer : Navbar
+- ListTile : Isi navbar
+- Form : Formulir penerima input user
+- SingleChildScrollView : Scroller
+- TextFormField : Input yang diketik
+- DropdownButtonFormField : Input dengan dropdown yang dapat diberi validator
+- Container : Penampung umum
+- Card : Card-card pada tampilan budget
+- SizedBox : Box pada card yang sudah fixed ukurannya
+
+### 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed)
+- onPressed : Setelah peng-klik-an tombol selesai
+- onSaved : Setelah user menyimpan
+- onChanged : Ketika perubahan terjadi
+- onTap : Sesaat setelah user meng-klik tombol
+
+### 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter
+Navigator menggunakan implementasi stack di dalamnya. Push pop yang dilakukan melalui navigator akan mengubah isi dari stack. Halaman yang ditampilkan pada aplikasi Flutter adalah halaman yang terletak di paling atas. 
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+- Membuat drawer yang menyambungkan main.dart, add_budget.dart, dan show_budget.dart
+- Membuat budget.dart yang memuat class Budget dan BudgetList
+- Membuat halaman baru, yaitu form yang menerima input judul, nominal, dan jenis sesuai ketentuan soal. Tidak lupa menambahkan tombol penyimpanan
+- Membuat halaman baru, yaitu menampilkan isi dari Budget yang telah disimpan
