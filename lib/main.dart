@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/add_budget.dart';
-import 'package:counter_7/show_budget.dart';
-import 'package:counter_7/budget.dart';
+import 'package:counter_7/page/add_budget.dart';
+import 'package:counter_7/page/show_budget.dart';
+import 'package:counter_7/page/show_watchlist.dart';
 
 void main() {
   runApp(const MyApp());
@@ -103,6 +103,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const MyBudgetPage()),
+                  );
+                },
+              ),
+              ListTile(
+                title: const Text('My Watchlist'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MyWatchList()),
                   );
                 },
               ),

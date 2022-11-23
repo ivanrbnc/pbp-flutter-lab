@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/add_budget.dart';
-import 'package:counter_7/show_budget.dart';
-import 'package:counter_7/budget.dart';
+import 'package:counter_7/page/add_budget.dart';
+import 'package:counter_7/model/budget.dart';
+import 'package:counter_7/page/show_watchlist.dart';
 
 class MyBudgetPage extends StatefulWidget {
   const MyBudgetPage({super.key});
@@ -51,6 +51,16 @@ class _MyBudgetPageState extends State<MyBudgetPage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const MyBudgetPage()),
+                  );
+                },
+              ),
+              ListTile(
+                title: const Text('My Watchlist'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MyWatchList()),
                   );
                 },
               ),

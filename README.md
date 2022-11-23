@@ -82,3 +82,28 @@ Navigator menggunakan implementasi stack di dalamnya. Push pop yang dilakukan me
 - Membuat budget.dart yang memuat class Budget dan BudgetList
 - Membuat halaman baru, yaitu form yang menerima input judul, nominal, dan jenis sesuai ketentuan soal. Tidak lupa menambahkan tombol penyimpanan
 - Membuat halaman baru, yaitu menampilkan isi dari Budget yang telah disimpan
+
+# Jawaban dari pertanyaan yang telah diberikan (Tugas 9)
+
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa. Meskipun begitu, dikarenakan oleh tidak adanya struktur dari class yang jelas, penempatan data JSON bisa saja tidak sesuai dengan yang diinginkan. Hal tersebut tidak lebih baik karena terdapat kemungkinan logic error yang terjadi.
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- FutureBuilder : Menampilkan data dari JSON yang AKAN ditangkap
+- ListView : Menampilkan data dari JSON yang SUDAH ditangkap
+
+### 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Mengatur dependensi http
+- Membuat model penampung data dari JSON
+- Dengan metode GET, JSON akan ditangkap dan dibuat menjadi objek dari model yang telah dibuat
+- Menampilkan data dibantu dengan FutureBuilder
+
+### 4. Jelaskan bagaimana cara kamu mengimplementasikan *checklist* di atas.
+- Menambahkan drawer show_watchlist.dart
+- Membuat watchlist.dart yang memuat class Watchlist
+- Mengatur dependensi http
+- Membuat fungsi fetch atau penangkap JSON
+- Menampilkan data-data tersebut sesuai judul dari Watchlist yang dimiliki
+- Sambungkan tiap Watchlist ke detail
+- Membuat halaman baru, yaitu detail dari film yang berisi ketentuan soal
+- Tambahkan tombol kembali dengan Navigator.pop
