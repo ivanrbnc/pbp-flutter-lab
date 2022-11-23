@@ -70,7 +70,7 @@ class MyWatchListDetail extends StatelessWidget {
           )),
           Text("Release Date: " + myWatchList.releaseDate,
               style: TextStyle(fontSize: 25)),
-          Text("Rating: " + myWatchList.rating.toString() + "/10",
+          Text("Rating: " + myWatchList.rating.toString() + "/5",
               style: TextStyle(fontSize: 25)),
           myWatchList.watched
               ? Text("Status : watched", style: TextStyle(fontSize: 25))

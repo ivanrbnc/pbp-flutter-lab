@@ -16,8 +16,8 @@ class MyWatchList extends StatefulWidget {
 
 class _MyWatchListState extends State<MyWatchList> {
   Future<List<WatchList>> fetchWatchlist() async {
-    var url = Uri.parse(
-        'https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10');
+    var url =
+        Uri.parse('http://ivanrbnc-pbp-tugas2.herokuapp.com/mywatchlist/json/');
     var response = await http.get(
       url,
       headers: {
